@@ -1,6 +1,40 @@
 // G-Version - Split the Nota
 // Skriv din pseudokod innanför nedanstående kommentarsblock
 /*
+// 1. INPUT
+    INPUT TotalSum AS REAL             // Example: 100.00 (in currency units)
+    INPUT NumberOfFriends AS INTEGER   // Example: 4
+    INPUT TipRateDecimal AS REAL       // Example: 0.10 (for 10%)
+
+    // 2. VALIDATION: Check Input
+    IF TotalSum <= 0 OR NumberOfFriends <= 0 OR TipRateDecimal < 0 THEN
+        OUTPUT "Invalid input. Values must be positive (except tip rate, which can be 0)."
+        RETURN
+    END IF
+
+    // 3. CALCULATION
+    TipAmount = TotalSum * TipRateDecimal
+    TotalBill = TotalSum + TipAmount
+    CostPerPerson = TotalBill / NumberOfFriends
+
+    // 4. OUTPUT
+    OUTPUT "--- SPLIT THE NOTA RESULT ---"
+    OUTPUT "Total Sum (Excl. Tip): " + TotalSum
+    OUTPUT "Tip Amount: " + TipAmount
+    OUTPUT "Total Bill (Incl. Tip): " + TotalBill
+    OUTPUT "Number of People: " + NumberOfFriends
+    OUTPUT "===================================="
+    OUTPUT "Cost Per Person: " + CostPerPerson
+END FUNCTION
+
+// Start Program:
+CALL SplitTheNota
+*/
+
+// VG-Version - Lewis Carroll Word Puzzle
+// Skriv din pseudokod innanför nedanstående kommentarsblock
+// Startkoden är 100% frivillig och kan tas bort eller skrivas om
+/*
 FUNCTION CheckDifference(WordA, WordB):
     // Checks if WordA and WordB differ by EXACTLY one letter.
 
@@ -24,12 +58,6 @@ FUNCTION CheckDifference(WordA, WordB):
         RETURN FALSE
     END IF
 END FUNCTION
-*/
-
-// VG-Version - Lewis Carroll Word Puzzle
-// Skriv din pseudokod innanför nedanstående kommentarsblock
-// Startkoden är 100% frivillig och kan tas bort eller skrivas om
-/*
 FUNCTION LewisCarrollWordPuzzle(StartWord, EndWord, DICTIONARY):
     // 1. INITIALIZATION
     CurrentWord = StartWord
